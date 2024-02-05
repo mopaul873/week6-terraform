@@ -6,12 +6,12 @@ resource "aws_lightsail_instance" "custom" {
   bundle_id         = "nano_1_0"
   user_data         = "sudo yum install -y httpd && sudo systemctl start httpd && sudo systemctl enable httpd && echo '<h1>Deployed via Terraform. I am excited. God is gooood all the time</h1>' | sudo tee /var/www/html/index.html"
 }
-resource "aws_iam_group" "developers" {
+resource "aws_iam_group" "name" {
        path = "/users/"
-       name = "cloudteam"
+       name = "ansible group"
 }
 resource "aws_iam_user" "lb" {
-  name = "u5bt2023"
+  name = "ansible"
   path = "/system/"
 
   tags = {
