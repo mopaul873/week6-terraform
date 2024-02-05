@@ -8,10 +8,10 @@ resource "aws_lightsail_instance" "custom" {
 }
 resource "aws_iam_group" "name" {
        path = "/users/"
-       name = "ansible group"
+       name = "ansible team"
 }
 resource "aws_iam_user" "lb" {
-  name = "ansible"
+  name = "ansible-j"
   path = "/system/"
 
   tags = {
