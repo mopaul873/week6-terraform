@@ -1,6 +1,6 @@
 
 resource "aws_lightsail_instance" "custom" {
-  name              = "week_5"
+  name              = "week-5"
   availability_zone = "us-east-1b"
   blueprint_id      = "amazon_linux_2"
   bundle_id         = "nano_1_0"
@@ -8,10 +8,10 @@ resource "aws_lightsail_instance" "custom" {
 }
 resource "aws_iam_group" "name" {
        path = "/users/"
-       name = "ansiblegroup"
+       name = "Momogroup"
 }
 resource "aws_iam_user" "lb" {
-  name = "ansible"
+  name = "pablo"
   path = "/system/"
 
   tags = {
